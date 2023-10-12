@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-6"
+let bnbPackageVersion: Version = "1.8.0-7"
 
 let package = Package(
     name: "BNBEyes",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBEyes",
             targets: [
-                "BNBEyes",
-                "BNBSdkCore",
-                "BNBEffectPlayer",
-                "BNBScripting",
-                "BNBFaceTracker"
+                "BNBEyesBNBEyesTarget",
+                "BNBEyesBNBSdkCoreTarget",
+                "BNBEyesBNBEffectPlayerTarget",
+                "BNBEyesBNBScriptingTarget",
+                "BNBEyesBNBFaceTrackerTarget"
             ]
         ),
     ],
@@ -45,7 +45,7 @@ let package = Package(
             checksum: "e64c04a3474860d158660d61be5f366592b60dd3a727dde3931f1c297236d243"
         ),
         .target(
-            name: "BNBSdkCore",
+            name: "BNBEyesBNBSdkCoreTarget",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBEffectPlayer",
+            name: "BNBEyesBNBEffectPlayerTarget",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBScripting",
+            name: "BNBEyesBNBScriptingTarget",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBFaceTracker",
+            name: "BNBEyesBNBFaceTrackerTarget",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
