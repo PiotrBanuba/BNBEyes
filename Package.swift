@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-13"
+let bnbPackageVersion: Version = "1.8.0-14"
 
 let package = Package(
     name: "BNBEyes",
@@ -13,10 +13,10 @@ let package = Package(
             name: "BNBEyes",
             targets: [
                 "BNBEyes_Target",
-                "BNBEyes_BNBEyes_Target",
-                "BNBEyes_BNBEyes_Target",
-                "BNBEyes_BNBEyes_Target",
-                "BNBEyes_BNBEyes_Target"
+                "BNBEyes_BNBSdkCore_Target",
+                "BNBEyes_BNBEffectPlayer_Target",
+                "BNBEyes_BNBScripting_Target",
+                "BNBEyes_BNBFaceTracker_Target"
             ]
         ),
     ],
