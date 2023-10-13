@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-14"
+let bnbPackageVersion: Version = "1.8.0-15"
 
 let package = Package(
     name: "BNBEyes",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBEyes",
             targets: [
-                "BNBEyes_Target",
-                "BNBEyes_BNBSdkCore_Target",
-                "BNBEyes_BNBEffectPlayer_Target",
-                "BNBEyes_BNBScripting_Target",
-                "BNBEyes_BNBFaceTracker_Target"
+                "BNBEyes",
+                "BNBEyes_BNBSdkCore",
+                "BNBEyes_BNBEffectPlayer",
+                "BNBEyes_BNBScripting",
+                "BNBEyes_BNBFaceTracker"
             ]
         ),
     ],
@@ -40,12 +40,12 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBEyes_Target",
+            name: "BNBEyes",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBEyes.zip",
             checksum: "e64c04a3474860d158660d61be5f366592b60dd3a727dde3931f1c297236d243"
         ),
         .target(
-            name: "BNBEyes_BNBSdkCore_Target",
+            name: "BNBEyesBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBEyes_BNBEffectPlayer_Target",
+            name: "BNBEyesBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBEyes_BNBScripting_Target",
+            name: "BNBEyesBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBEyes_BNBFaceTracker_Target",
+            name: "BNBEyesBNBFaceTracker",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
